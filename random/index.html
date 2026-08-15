@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="https://bliki-ja.github.io/random/">
   <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
-  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
   <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
   <script src="/js/jquery.toc.js"></script>
 </head>
@@ -36,6 +35,13 @@
         <a class="page-link" href="/hot/">人気エントリー</a>
         <a class="page-link" href="/random/">ランダム</a>
         <a class="page-link" href="/pofeaa/">PofEAA</a>
+        <a class="page-link nav-search-toggle" href="#search-panel" aria-controls="search-panel" aria-expanded="false">検索</a>
+      </div>
+      <div id="search-panel" class="nav-search-panel" hidden>
+        <div id="search"></div>
+        <div class="nav-search-fallback">
+          <input class="nav-search-fallback-input" type="search" placeholder="ローカルでは Pagefind 生成後に検索できます" disabled>
+        </div>
       </div>
     </nav>
   </div>
@@ -52,7 +58,7 @@
 
   <article class="post-content" id="page-content">
     <script type="text/javascript">
-const posts = ["/FrictionlessForeword","/202508-ai-thoughts","/ExpansionJoints","/who-is-llm","/LLMsBringNewNatureOfAbstraction","/SayYourWriting","/ForestAndDesert","/PeriodicFaceToFace","/SoftwareAndEngineering","/TestDrivenDevelopment","/TwoPizzaTeam","/TeamTopologies","/ConwaysLaw","/HumbleObject","/PairProgramming","/WaterfallProcess","/IsHighQualitySoftwareWorthTheCost","/TechnicalDebt","/SelfEncapsulation","/ValueObject","/PresentationDomainDataLayering","/CollectionClosureMethod","/BeckDesignRules","/SacrificialArchitecture","/ShuHaRi","/UnitTest","/SelfTestingCode","/ReportingDatabase","/CircuitBreaker","/BoundedContext","/BranchByAbstraction","/Datensparsamkeit","/StoryPoint","/DeploymentPipeline","/ContinuousDelivery","/XpVelocity","/UserStory","/PurposeOfEstimation","/Saba","/Infodeck","/TestCoverage","/DiversityImbalance","/AvoidingVideo","/SemanticConflict","/OverloadedGetterSetter","/FrequencyReducesDifficulty","/eradicating-non-determinism-in-tests","/ResourcePool","/CraftmanshipAndTheCrevasse","/VisualChannel","/SuiteOfTalks","/Semat","/ToyotaFailings","/DecreedStories","/ConversationalStories","/TechnicalDebtQuadrant","/FeatureBranch","/TwoHardThings","/DynamicTypeCheck","/FlaccidScrum","/BusinessReadableDSL","/EstimatedInterest","/DatabaseThaw","/ServiceCustodian","/EarlyPain","/ModelDrivenSoftwareDevelopment","/MDSDandDSL","/AgileVersusLean","/SyntacticNoise","/ParserFear","/DomainSpecificLanguage","/SchoolsOfSoftwareDevelopment","/CheaperTalentHypothesis","/PreferDesignSkills","/TestCancer","/BookCode","/GroovyOrJRuby","/AltNetConf","/RollerSkateImplementation","/CustomerLoyaltySoftware","/IsChangingInterfacesRefactoring","/OneLanguage","/DesignStaminaHypothesis","/DuplexBook","/RubyMicrosoft","/RailsConf2007","/Translations","/TouchFile","/PendingHead","/Transactionless","/DesignPayoffLine","/JRubyVelocity","/TypeInstanceHomonym","/ClassInstanceVariable","/RoleInterface","/JRake","/BigScreen","/Web2.0","/SemanticDiffusion","/Neologism","/FeatureDevotion","/UbiquitousLanguage","/RubyAnnotations","/ObjectMother","/InternalDslStyle","/AgileImposition","/VotingMachines","/PervasiveVersioning","/ExtemporarySpeaking","/DslBoundary","/CustomerAffinity","/EnterpriseRails","/AgileManifestoMeeting","/Buildix","/RubyPloticus","/CodeOwnership","/EvaluatingRuby","/DataClump","/CodeSmell","/ConstructorInitialization","/Xunit","/TestDouble","/TestInvariant","/ImplicitInterfaceImplementation","/TravelClothing","/FluentInterface","/ContextualValidation","/MinimalInterface","/HumaneInterface","/CommandQuerySeparation","/JohnVlissides","/InMemoryTestDatabase","/SmalltalkBooks","/OOPSLA2005","/JAOO2005","/FivePoundBag","/AnecdotalEvidence","/ThoughtWorksChina","/RubyPeople","/Diversity","/RefactoringPhotran","/OpenSpace","/CallSuper","/LeadershipDivide","/Broken","/ServiceOrientedAmbiguity","/InversionOfControl","/HollywoodPrinciple","/LanguageWorkbenchReadings","/RigorousAgile","/PostIntelliJ","/RoysSocialExperiment","/ErraticTestFailure","/CodeAsDocumentation","/PeopleMatterMost","/OpenSourceResearch","/Detestable","/DynamicTyping","/UmlActivityDiagram","/CatastrophicFailover","/AbundantMutation","/PatternShare","/Rotation","/BallAndSocket","/ThoughtWorks2005","/LayeringPrinciples","/SpreadingIncrementalism","/MetaphoricQuestioning","/MoreVersionControl","/Dominica","/MetaProgrammingSystem","/OOPSLA2004","/ScopeLimbering","/LocalDTO","/StaticSubstitution","/DebianJava","/FixedScopeMirage","/Closure","/StandardStoryPoints","/IsFixingAnUnknownBugRefactoring","/IsOptimizationRefactoring","/RefactoringBoundary","/IsDeclarationOrderingRefactoring","/DefinitionOfRefactoring","/JunitNewInstance","/FineDetail","/TestingResourcePools","/CourtesyImplementation","/FaultyTechniqueDichotomy","/OpenIntellectualProperty","/C3","/AssertionFreeTesting","/TechnicalStaffOrganization","/PreferFunctionalStaffOrganization","/FunctionalStaffOrganization","/InstallingDebian","/StranglerFigApplication","/StranglerApplication","/EventInterception","/AssetCapture","/ThrownEstimate","/UmlSketchingTools","/SunkCostDrivenArchitecture","/DiffDebugging","/AgileHandover","/IntegrationDatabase","/ApplicationDatabase","/DatabaseStyles","/YesterdaysWeather","/QuestionTimePanel","/LimitationsOfGeneralAdvice","/AppealToAuthority","/AgileCertification","/Japan","/dotNETArchitectSemi","/XPJUG","/IsAgileForAll","/SpecificationByExample","/CodeExamples","/SoftwareDevelopmentAttitude","/EnablingAttitude","/DirectingAttitude","/DataModels","/PublicCsharpFields","/ModelDrivenArchitecture","/VeryLowDefectProject","/DecoratedCommand","/BuildLanguage","/DatabaseAndBuildTime","/PeopleOriented","/RefactoringMalapropism","/ObjectsAndIteration","/PublishedInterface","/OnceUponaTimeInTheWest","/DerivedInformation","/TestingLanguage","/StickyTimeline","/ProvideServiceStub","/AnemicDomainModel","/CommandOrientedInterface","/HistoryOfIterativeDevelopment","/UnwantedModelingLanguage","/C-Refactory","/PresentationDomainSeparation","/EnterpriseArchitecture","/LocalVariablesInClassDiagrams","/PrinciplesOfXP","/MovingAwayFromXslt","/DependencyAndAssociation","/PlatformIndependentMalapropism","/Seedwork","/ApplicationBoundary","/EtymologyOfRefactoring","/CannotMeasureProductivity","/CurrencyAsValue","/UseCasesAndStories","/UseCase","/PleasingTheCustomer","/BuildingArchitect","/MultiplicityNotCardinality","/FixedLengthString","/PatternsAreNothingNew","/FixedPrice","/MultipleCanonicalModels","/HistoryIsNotBunk","/Swebok","/Agiledox","/TypedCollection","/SecurityAndDesign","/MakingStubs","/Uml2","/IncludeAndExtend","/RefactoringCringely","/UmlMode","/UmlAsSketch","/UmlAsProgrammingLanguage","/UmlAsBlueprint","/WhatIsaBliki","/LanguageForLearningObjects","/PlatformBuilding","/HarvestedPlatform","/HarvestedFramework","/FrameworkBuilding","/FoundationPlatform","/FoundationFramework","/AggregationAndComposition","/WhatIsFailure","/ProtectedData","/AccessModifier","/CollectionsOnClassDiagrams","/LargeAgileProjects","/Wardish","/UseOfXML","/Subversion","/StandardsSpeak","/SignatureSeriesCriteria","/SetterInitialization","/SemanticDiff","/Seal","/RssFeeds","/RelationalDataModel","/PostModernProgramming","/POJO","/OnsiteCustomer","/NetworkDataModel","/MultipleDesktops","/LazyInitialization","/LayProgrammer","/Knoppix","/InterfaceImplementationPair","/IntelliCsharp","/HierarchicDataModel","/HeaderInterface","/GangOfFour","/FirstLaw","/EvansClassification","/EncapsulatedCollection","/DotVoting","/DDD_Aggregate","/CobolInference","/ClockWrapper","/Annotation"];
+const posts = ["/VibeCoding","/AgenticProgramming","/InterrogatoryLLM","/MythicalManMonth","/NovemberInflection","/ArchitectureDecisionRecord","/HostLeadership","/ExcessiveBold","/FrictionlessForeword","/202508-ai-thoughts","/ExpansionJoints","/who-is-llm","/LLMsBringNewNatureOfAbstraction","/SayYourWriting","/ForestAndDesert","/PeriodicFaceToFace","/SoftwareAndEngineering","/TestDrivenDevelopment","/TwoPizzaTeam","/TeamTopologies","/ConwaysLaw","/HumbleObject","/PairProgramming","/WaterfallProcess","/IsHighQualitySoftwareWorthTheCost","/TechnicalDebt","/SelfEncapsulation","/ValueObject","/PresentationDomainDataLayering","/CollectionClosureMethod","/BeckDesignRules","/SacrificialArchitecture","/ShuHaRi","/UnitTest","/SelfTestingCode","/ReportingDatabase","/CircuitBreaker","/BoundedContext","/BranchByAbstraction","/Datensparsamkeit","/StoryPoint","/ExtremeProgramming","/DeploymentPipeline","/ContinuousDelivery","/XpVelocity","/UserStory","/PurposeOfEstimation","/Saba","/Infodeck","/TestCoverage","/DiversityImbalance","/AvoidingVideo","/SemanticConflict","/OverloadedGetterSetter","/FrequencyReducesDifficulty","/eradicating-non-determinism-in-tests","/ResourcePool","/CraftmanshipAndTheCrevasse","/VisualChannel","/SuiteOfTalks","/Semat","/ToyotaFailings","/DecreedStories","/ConversationalStories","/TechnicalDebtQuadrant","/FeatureBranch","/TwoHardThings","/DynamicTypeCheck","/FlaccidScrum","/BusinessReadableDSL","/EstimatedInterest","/DatabaseThaw","/ServiceCustodian","/EarlyPain","/ModelDrivenSoftwareDevelopment","/MDSDandDSL","/AgileVersusLean","/SyntacticNoise","/ParserFear","/DomainSpecificLanguage","/SchoolsOfSoftwareDevelopment","/CheaperTalentHypothesis","/PreferDesignSkills","/TestCancer","/BookCode","/GroovyOrJRuby","/AltNetConf","/RollerSkateImplementation","/CustomerLoyaltySoftware","/IsChangingInterfacesRefactoring","/OneLanguage","/DesignStaminaHypothesis","/DuplexBook","/RubyMicrosoft","/RailsConf2007","/Translations","/TouchFile","/PendingHead","/Transactionless","/DesignPayoffLine","/JRubyVelocity","/TypeInstanceHomonym","/ClassInstanceVariable","/RoleInterface","/JRake","/BigScreen","/Web2.0","/SemanticDiffusion","/Neologism","/FeatureDevotion","/UbiquitousLanguage","/RubyAnnotations","/ObjectMother","/InternalDslStyle","/AgileImposition","/VotingMachines","/PervasiveVersioning","/ExtemporarySpeaking","/DslBoundary","/CustomerAffinity","/EnterpriseRails","/AgileManifestoMeeting","/Buildix","/RubyPloticus","/CodeOwnership","/EvaluatingRuby","/DataClump","/CodeSmell","/ConstructorInitialization","/Xunit","/TestDouble","/TestInvariant","/ImplicitInterfaceImplementation","/TravelClothing","/FluentInterface","/ContextualValidation","/MinimalInterface","/HumaneInterface","/CommandQuerySeparation","/JohnVlissides","/InMemoryTestDatabase","/SmalltalkBooks","/OOPSLA2005","/JAOO2005","/FivePoundBag","/AnecdotalEvidence","/ThoughtWorksChina","/RubyPeople","/Diversity","/RefactoringPhotran","/OpenSpace","/CallSuper","/LeadershipDivide","/Broken","/ServiceOrientedAmbiguity","/InversionOfControl","/HollywoodPrinciple","/LanguageWorkbenchReadings","/RigorousAgile","/PostIntelliJ","/RoysSocialExperiment","/ErraticTestFailure","/CodeAsDocumentation","/PeopleMatterMost","/OpenSourceResearch","/Detestable","/DynamicTyping","/UmlActivityDiagram","/CatastrophicFailover","/AbundantMutation","/PatternShare","/Rotation","/BallAndSocket","/ThoughtWorks2005","/LayeringPrinciples","/SpreadingIncrementalism","/MetaphoricQuestioning","/MoreVersionControl","/Dominica","/MetaProgrammingSystem","/OOPSLA2004","/ScopeLimbering","/LocalDTO","/StaticSubstitution","/DebianJava","/FixedScopeMirage","/Closure","/StandardStoryPoints","/IsFixingAnUnknownBugRefactoring","/IsOptimizationRefactoring","/RefactoringBoundary","/IsDeclarationOrderingRefactoring","/DefinitionOfRefactoring","/JunitNewInstance","/FineDetail","/TestingResourcePools","/CourtesyImplementation","/FaultyTechniqueDichotomy","/OpenIntellectualProperty","/C3","/AssertionFreeTesting","/TechnicalStaffOrganization","/PreferFunctionalStaffOrganization","/FunctionalStaffOrganization","/InstallingDebian","/StranglerFigApplication","/StranglerApplication","/EventInterception","/AssetCapture","/ThrownEstimate","/UmlSketchingTools","/SunkCostDrivenArchitecture","/DiffDebugging","/AgileHandover","/IntegrationDatabase","/ApplicationDatabase","/DatabaseStyles","/YesterdaysWeather","/QuestionTimePanel","/LimitationsOfGeneralAdvice","/AppealToAuthority","/AgileCertification","/Japan","/dotNETArchitectSemi","/XPJUG","/IsAgileForAll","/SpecificationByExample","/CodeExamples","/SoftwareDevelopmentAttitude","/EnablingAttitude","/DirectingAttitude","/DataModels","/PublicCsharpFields","/ModelDrivenArchitecture","/VeryLowDefectProject","/DecoratedCommand","/BuildLanguage","/DatabaseAndBuildTime","/PeopleOriented","/RefactoringMalapropism","/ObjectsAndIteration","/PublishedInterface","/OnceUponaTimeInTheWest","/DerivedInformation","/TestingLanguage","/StickyTimeline","/ProvideServiceStub","/AnemicDomainModel","/CommandOrientedInterface","/HistoryOfIterativeDevelopment","/UnwantedModelingLanguage","/C-Refactory","/PresentationDomainSeparation","/EnterpriseArchitecture","/LocalVariablesInClassDiagrams","/PrinciplesOfXP","/MovingAwayFromXslt","/DependencyAndAssociation","/PlatformIndependentMalapropism","/Seedwork","/ApplicationBoundary","/EtymologyOfRefactoring","/CannotMeasureProductivity","/CurrencyAsValue","/UseCasesAndStories","/UseCase","/PleasingTheCustomer","/BuildingArchitect","/MultiplicityNotCardinality","/FixedLengthString","/PatternsAreNothingNew","/FixedPrice","/MultipleCanonicalModels","/HistoryIsNotBunk","/Swebok","/Agiledox","/TypedCollection","/SecurityAndDesign","/MakingStubs","/Uml2","/IncludeAndExtend","/RefactoringCringely","/UmlMode","/UmlAsSketch","/UmlAsProgrammingLanguage","/UmlAsBlueprint","/WhatIsaBliki","/LanguageForLearningObjects","/PlatformBuilding","/HarvestedPlatform","/HarvestedFramework","/FrameworkBuilding","/FoundationPlatform","/FoundationFramework","/AggregationAndComposition","/WhatIsFailure","/ProtectedData","/AccessModifier","/CollectionsOnClassDiagrams","/LargeAgileProjects","/Wardish","/UseOfXML","/Subversion","/StandardsSpeak","/SignatureSeriesCriteria","/SetterInitialization","/SemanticDiff","/Seal","/RssFeeds","/RelationalDataModel","/PostModernProgramming","/POJO","/OnsiteCustomer","/NetworkDataModel","/MultipleDesktops","/LazyInitialization","/LayProgrammer","/Knoppix","/InterfaceImplementationPair","/IntelliCsharp","/HierarchicDataModel","/HeaderInterface","/GangOfFour","/FirstLaw","/EvansClassification","/EncapsulatedCollection","/DotVoting","/DDD_Aggregate","/CobolInference","/ClockWrapper","/Annotation"];
 const randomIndex = Math.floor(Math.random() * posts.length);
 const post = posts[randomIndex];
 window.location.href = post;
@@ -105,16 +111,80 @@ window.location.href = post;
       </div>
     </div>
 
-
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-<script src="/pagefind/pagefind-ui.js"></script>
-<div id="search"></div>
 <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-    new PagefindUI({ element: "#search", showSubResults: true });
+  window.addEventListener('DOMContentLoaded', () => {
+    const searchRoot = document.getElementById('search');
+    const navSearchToggle = document.querySelector('.nav-search-toggle');
+    const navSearchPanel = document.querySelector('.nav-search-panel');
+    const fallback = document.querySelector('.nav-search-fallback');
+
+    const setNavSearchOpen = (isOpen) => {
+      if (!navSearchToggle || !navSearchPanel) {
+        return;
+      }
+
+      navSearchToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      navSearchPanel.hidden = !isOpen;
+
+      if (isOpen) {
+        const searchInput = navSearchPanel.querySelector('input:not([disabled])');
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }
+    };
+
+    if (navSearchToggle && navSearchPanel) {
+      navSearchToggle.addEventListener('click', (event) => {
+        event.preventDefault();
+        setNavSearchOpen(navSearchPanel.hidden);
+      });
+
+      document.addEventListener('click', (event) => {
+        const clickedToggle = navSearchToggle === event.target || navSearchToggle.contains(event.target);
+        const clickedPanel = navSearchPanel.contains(event.target);
+
+        if (!navSearchPanel.hidden && !clickedToggle && !clickedPanel) {
+          setNavSearchOpen(false);
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          setNavSearchOpen(false);
+        }
+      });
+    }
+
+    const initPagefind = () => {
+      if (!searchRoot || !window.PagefindUI) {
+        return;
+      }
+
+      new PagefindUI({ element: "#search", showSubResults: true });
+
+      if (fallback) {
+        fallback.hidden = true;
+      }
+    };
+
+    if (window.PagefindUI) {
+      initPagefind();
+      return;
+    }
+
+    const pagefindStyles = document.createElement('link');
+    pagefindStyles.rel = 'stylesheet';
+    pagefindStyles.href = '/pagefind/pagefind-ui.css';
+    document.head.appendChild(pagefindStyles);
+
+    const pagefindScript = document.createElement('script');
+    pagefindScript.src = '/pagefind/pagefind-ui.js';
+    pagefindScript.async = true;
+    pagefindScript.addEventListener('load', initPagefind);
+    document.body.appendChild(pagefindScript);
   });
 </script>
-
   </div>
 
 </footer>

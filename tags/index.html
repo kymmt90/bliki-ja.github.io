@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="https://bliki-ja.github.io/tags/">
   <link rel="alternate" type="application/rss+xml" title="Martin Fowler's Bliki (ja)" href="https://bliki-ja.github.io/feed.xml" />
-  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
   <script src="https://releases.jquery.com/git/jquery-3.x-git.slim.min.js"></script>
   <script src="/js/jquery.toc.js"></script>
 </head>
@@ -36,6 +35,13 @@
         <a class="page-link" href="/hot/">人気エントリー</a>
         <a class="page-link" href="/random/">ランダム</a>
         <a class="page-link" href="/pofeaa/">PofEAA</a>
+        <a class="page-link nav-search-toggle" href="#search-panel" aria-controls="search-panel" aria-expanded="false">検索</a>
+      </div>
+      <div id="search-panel" class="nav-search-panel" hidden>
+        <div id="search"></div>
+        <div class="nav-search-fallback">
+          <input class="nav-search-fallback-input" type="search" placeholder="ローカルでは Pagefind 生成後に検索できます" disabled>
+        </div>
       </div>
     </nav>
   </div>
@@ -117,9 +123,13 @@
   <h1>agile</h1>
   <ul>
     
+    <li><a href="/HostLeadership">ホスト・リーダーシップ</a></li>
+    
     <li><a href="/ForestAndDesert">森と砂漠</a></li>
     
     <li><a href="/SelfTestingCode">自己テストコード</a></li>
+    
+    <li><a href="/ExtremeProgramming">エクストリームプログラミング</a></li>
     
     <li><a href="/UserStory">ユーザーストーリー</a></li>
     
@@ -178,6 +188,8 @@
     
     <li><a href="/ShuHaRi">守破離</a></li>
     
+    <li><a href="/ExtremeProgramming">エクストリームプログラミング</a></li>
+    
     <li><a href="/FlaccidScrum">ヘロヘロScrum</a></li>
     
     <li><a href="/EarlyPain">初期の苦痛</a></li>
@@ -215,6 +227,8 @@
 <div id="tag_application architecture" class="tagsec" style="display:none;">
   <h1>application architecture</h1>
   <ul>
+    
+    <li><a href="/ArchitectureDecisionRecord">アーキテクチャデシジョンレコード</a></li>
     
     <li><a href="/ConwaysLaw">コンウェイの法則</a></li>
     
@@ -403,6 +417,8 @@
   <h1>collaboration</h1>
   <ul>
     
+    <li><a href="/ArchitectureDecisionRecord">アーキテクチャデシジョンレコード</a></li>
+    
     <li><a href="/PeriodicFaceToFace">定期的な対面の機会</a></li>
     
     <li><a href="/PairProgramming">ペアプログラミング</a></li>
@@ -425,6 +441,8 @@
 <div id="tag_computer history" class="tagsec" style="display:none;">
   <h1>computer history</h1>
   <ul>
+    
+    <li><a href="/MythicalManMonth">人月の神話</a></li>
     
     <li><a href="/SoftwareAndEngineering">ソフトウェアとエンジニアリング</a></li>
     
@@ -684,6 +702,8 @@
   <h1>enterprise architecture</h1>
   <ul>
     
+    <li><a href="/ArchitectureDecisionRecord">アーキテクチャデシジョンレコード</a></li>
+    
     <li><a href="/TeamTopologies">チームトポロジー</a></li>
     
     <li><a href="/ConwaysLaw">コンウェイの法則</a></li>
@@ -747,6 +767,8 @@
     
     <li><a href="/SelfTestingCode">自己テストコード</a></li>
     
+    <li><a href="/ExtremeProgramming">エクストリームプログラミング</a></li>
+    
     <li><a href="/XpVelocity">XPのベロシティ</a></li>
     
     <li><a href="/CraftmanshipAndTheCrevasse">クラフトマンシップと裂け目</a></li>
@@ -771,6 +793,14 @@
 <div id="tag_generative AI" class="tagsec" style="display:none;">
   <h1>generative AI</h1>
   <ul>
+    
+    <li><a href="/VibeCoding">バイブコーディング</a></li>
+    
+    <li><a href="/AgenticProgramming">エージェントプログラミング</a></li>
+    
+    <li><a href="/InterrogatoryLLM">質問型LLM</a></li>
+    
+    <li><a href="/NovemberInflection">11月の転換点</a></li>
     
     <li><a href="/LLMsBringNewNatureOfAbstraction">LLMは新しい抽象化をもたらす</a></li>
     
@@ -1082,6 +1112,8 @@
   <h1>project planning</h1>
   <ul>
     
+    <li><a href="/MythicalManMonth">人月の神話</a></li>
+    
     <li><a href="/IsHighQualitySoftwareWorthTheCost">品質の高いソフトウェアはそのコストに見合うのか？</a></li>
     
     <li><a href="/XpVelocity">XPのベロシティ</a></li>
@@ -1297,6 +1329,8 @@
   <h1>team organization</h1>
   <ul>
     
+    <li><a href="/HostLeadership">ホスト・リーダーシップ</a></li>
+    
     <li><a href="/PeriodicFaceToFace">定期的な対面の機会</a></li>
     
     <li><a href="/TwoPizzaTeam">2枚のピザチーム</a></li>
@@ -1360,6 +1394,8 @@
 <div id="tag_technical leadership" class="tagsec" style="display:none;">
   <h1>technical leadership</h1>
   <ul>
+    
+    <li><a href="/HostLeadership">ホスト・リーダーシップ</a></li>
     
     <li><a href="/PreferDesignSkills">好ましい設計スキル</a></li>
     
@@ -1713,16 +1749,80 @@ if (tag == "") {
       </div>
     </div>
 
-
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-<script src="/pagefind/pagefind-ui.js"></script>
-<div id="search"></div>
 <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-    new PagefindUI({ element: "#search", showSubResults: true });
+  window.addEventListener('DOMContentLoaded', () => {
+    const searchRoot = document.getElementById('search');
+    const navSearchToggle = document.querySelector('.nav-search-toggle');
+    const navSearchPanel = document.querySelector('.nav-search-panel');
+    const fallback = document.querySelector('.nav-search-fallback');
+
+    const setNavSearchOpen = (isOpen) => {
+      if (!navSearchToggle || !navSearchPanel) {
+        return;
+      }
+
+      navSearchToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      navSearchPanel.hidden = !isOpen;
+
+      if (isOpen) {
+        const searchInput = navSearchPanel.querySelector('input:not([disabled])');
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }
+    };
+
+    if (navSearchToggle && navSearchPanel) {
+      navSearchToggle.addEventListener('click', (event) => {
+        event.preventDefault();
+        setNavSearchOpen(navSearchPanel.hidden);
+      });
+
+      document.addEventListener('click', (event) => {
+        const clickedToggle = navSearchToggle === event.target || navSearchToggle.contains(event.target);
+        const clickedPanel = navSearchPanel.contains(event.target);
+
+        if (!navSearchPanel.hidden && !clickedToggle && !clickedPanel) {
+          setNavSearchOpen(false);
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          setNavSearchOpen(false);
+        }
+      });
+    }
+
+    const initPagefind = () => {
+      if (!searchRoot || !window.PagefindUI) {
+        return;
+      }
+
+      new PagefindUI({ element: "#search", showSubResults: true });
+
+      if (fallback) {
+        fallback.hidden = true;
+      }
+    };
+
+    if (window.PagefindUI) {
+      initPagefind();
+      return;
+    }
+
+    const pagefindStyles = document.createElement('link');
+    pagefindStyles.rel = 'stylesheet';
+    pagefindStyles.href = '/pagefind/pagefind-ui.css';
+    document.head.appendChild(pagefindStyles);
+
+    const pagefindScript = document.createElement('script');
+    pagefindScript.src = '/pagefind/pagefind-ui.js';
+    pagefindScript.async = true;
+    pagefindScript.addEventListener('load', initPagefind);
+    document.body.appendChild(pagefindScript);
   });
 </script>
-
   </div>
 
 </footer>
